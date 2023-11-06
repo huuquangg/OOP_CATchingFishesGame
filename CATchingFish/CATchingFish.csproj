@@ -81,7 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\img\" />
+    <Folder Include="Resources\voice\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img\pu.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

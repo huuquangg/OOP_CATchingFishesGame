@@ -8,3 +8,8 @@ E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\
 E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
 E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.exe
 E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.pdb
+C:\Users\ASUS\Source\Repos\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\Repos\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.GamePlay1vs1vs1vs1.resources
+C:\Users\ASUS\Source\Repos\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.GenerateResource.cache
+C:\Users\ASUS\Source\Repos\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.exe
+C:\Users\ASUS\Source\Repos\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.pdb
