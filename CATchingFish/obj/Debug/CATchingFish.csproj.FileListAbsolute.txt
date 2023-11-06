@@ -1,0 +1,10 @@
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.exe.config
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.exe
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.pdb
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.AssemblyReference.cache
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.GamePlay1vs1vs1vs1.resources
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.Properties.Resources.resources
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.GenerateResource.cache
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.exe
+E:\University\V OOP\doanoop\huuquangg\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.pdb
