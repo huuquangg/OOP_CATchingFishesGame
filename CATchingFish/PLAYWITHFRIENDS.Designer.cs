@@ -1,6 +1,6 @@
 ﻿namespace CATchingFish
 {
-    partial class GamePlay1vs1vs1vs1
+    partial class PLAYWITHFRIENDS
     {
         /// <summary>
         /// Required designer variable.

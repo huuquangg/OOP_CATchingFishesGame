@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CATchingFish
 {
-    public partial class GamePlay1vs1vs1vs1 : Form
+    public partial class PLAYWITHFRIENDS : Form
     {
-        public GamePlay1vs1vs1vs1()
+        public PLAYWITHFRIENDS()
         {
             InitializeComponent();
         }

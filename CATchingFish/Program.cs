@@ -16,7 +16,8 @@ namespace CATchingFish
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GamePlay1vs1vs1vs1());
+            Application.Run(new HomeScreen());
+            //Application.Run(new PLAYWITHFRIENDS());
         }
     }
 }

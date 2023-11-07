@@ -59,15 +59,5 @@ namespace CATchingFish.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _339925064_1187479865265987_6250588808201672185_n {
-            get {
-                object obj = ResourceManager.GetObject("339925064_1187479865265987_6250588808201672185_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
