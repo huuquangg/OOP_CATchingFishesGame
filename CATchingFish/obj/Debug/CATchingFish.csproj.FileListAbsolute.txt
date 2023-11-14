@@ -19,3 +19,14 @@ E:\University\V OOP\doanoop\Implementation\CATchingFishes_OOP\CATchingFish\bin\D
 E:\University\V OOP\doanoop\Implementation\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.pdb
 E:\University\V OOP\doanoop\Implementation\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.Properties.Resources.resources
 E:\University\V OOP\doanoop\Implementation\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\bin\Debug\CATchingFish.exe.config
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\bin\Debug\CATchingFish.exe
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\bin\Debug\CATchingFish.pdb
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.csproj.AssemblyReference.cache
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.HomeScreen.resources
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.PLAYWITHFRIENDS.resources
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.Properties.Resources.resources
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.csproj.GenerateResource.cache
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.exe
+E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.pdb

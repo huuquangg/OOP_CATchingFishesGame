@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreen));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.ContainerBTN = new System.Windows.Forms.Panel();
-            this.PAYWITHTEAM_btn = new System.Windows.Forms.Button();
+            this.PLAYWITHTEAM_btn = new System.Windows.Forms.Button();
             this.PLAYWITHFR_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.ContainerBTN.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.ContainerBTN.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,6 +68,32 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(247, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(483, 210);
+            this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(480, 60);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CATCHING FISHES";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // ContainerBTN
             // 
             this.ContainerBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -76,7 +102,7 @@
             this.ContainerBTN.AutoSize = true;
             this.ContainerBTN.BackColor = System.Drawing.Color.Transparent;
             this.ContainerBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ContainerBTN.Controls.Add(this.PAYWITHTEAM_btn);
+            this.ContainerBTN.Controls.Add(this.PLAYWITHTEAM_btn);
             this.ContainerBTN.Controls.Add(this.PLAYWITHFR_btn);
             this.ContainerBTN.Location = new System.Drawing.Point(247, 435);
             this.ContainerBTN.Name = "ContainerBTN";
@@ -84,22 +110,22 @@
             this.ContainerBTN.TabIndex = 2;
             this.ContainerBTN.Paint += new System.Windows.Forms.PaintEventHandler(this.ContainerBTN_Paint);
             // 
-            // PAYWITHTEAM_btn
+            // PLAYWITHTEAM_btn
             // 
-            this.PAYWITHTEAM_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PLAYWITHTEAM_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PAYWITHTEAM_btn.BackColor = System.Drawing.Color.DarkOrange;
-            this.PAYWITHTEAM_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PAYWITHTEAM_btn.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PAYWITHTEAM_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PAYWITHTEAM_btn.Location = new System.Drawing.Point(72, 111);
-            this.PAYWITHTEAM_btn.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.PAYWITHTEAM_btn.Name = "PAYWITHTEAM_btn";
-            this.PAYWITHTEAM_btn.Size = new System.Drawing.Size(344, 51);
-            this.PAYWITHTEAM_btn.TabIndex = 2;
-            this.PAYWITHTEAM_btn.Text = "PLAY WITH TEAM";
-            this.PAYWITHTEAM_btn.UseVisualStyleBackColor = false;
-            this.PAYWITHTEAM_btn.Click += new System.EventHandler(this.PAYWITHTEAM_btn_Click);
+            this.PLAYWITHTEAM_btn.BackColor = System.Drawing.Color.DarkOrange;
+            this.PLAYWITHTEAM_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PLAYWITHTEAM_btn.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PLAYWITHTEAM_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PLAYWITHTEAM_btn.Location = new System.Drawing.Point(72, 111);
+            this.PLAYWITHTEAM_btn.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.PLAYWITHTEAM_btn.Name = "PLAYWITHTEAM_btn";
+            this.PLAYWITHTEAM_btn.Size = new System.Drawing.Size(344, 51);
+            this.PLAYWITHTEAM_btn.TabIndex = 2;
+            this.PLAYWITHTEAM_btn.Text = "PLAY WITH TEAM";
+            this.PLAYWITHTEAM_btn.UseVisualStyleBackColor = false;
+            this.PLAYWITHTEAM_btn.Click += new System.EventHandler(this.PLAYWITHTEAM_btn_Click);
             // 
             // PLAYWITHFR_btn
             // 
@@ -142,32 +168,6 @@
             this.panel2.Size = new System.Drawing.Size(239, 212);
             this.panel2.TabIndex = 4;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(247, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(483, 210);
-            this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(0, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CATCHING FISHES";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,13 +176,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(969, 644);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(987, 650);
             this.Name = "HomeScreen";
-            this.Text = "HomeScreen";
+            this.Text = "CATCHING FISH GAME";
             this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.ContainerBTN.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.ContainerBTN.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,7 +192,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button PLAYWITHFR_btn;
         private System.Windows.Forms.Panel ContainerBTN;
-        private System.Windows.Forms.Button PAYWITHTEAM_btn;
+        private System.Windows.Forms.Button PLAYWITHTEAM_btn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

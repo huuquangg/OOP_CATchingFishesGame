@@ -37,12 +37,17 @@ namespace CATchingFish
 
         private void PLAYWITHFR_btn_Click(object sender, EventArgs e)
         {
+            PLAYWITHFRIENDS playwithfriends = new PLAYWITHFRIENDS();
+            playwithfriends.Show();
+            this.Hide();
 
         }
 
-        private void PAYWITHTEAM_btn_Click(object sender, EventArgs e)
+        private void PLAYWITHTEAM_btn_Click(object sender, EventArgs e)
         {
-
+            PLAYWITHTEAM playwitTeam = new PLAYWITHTEAM();
+            playwitTeam.Show();
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

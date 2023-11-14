@@ -31,5 +31,17 @@ namespace CATchingFish
         {
 
         }
+
+        private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PLAYWITHFRIENDS_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+        }
+
+
     }
 }
