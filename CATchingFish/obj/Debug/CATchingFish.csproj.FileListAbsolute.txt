@@ -30,3 +30,14 @@ E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.cspr
 E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
 E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.exe
 E:\University\V OOP\doanoop\CurrVersion\CATchingFish\obj\Debug\CATchingFish.pdb
+E:\Đồ án OOP\Code\CATchingFish\bin\Debug\CATchingFish.exe.config
+E:\Đồ án OOP\Code\CATchingFish\bin\Debug\CATchingFish.exe
+E:\Đồ án OOP\Code\CATchingFish\bin\Debug\CATchingFish.pdb
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.csproj.AssemblyReference.cache
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.HomeScreen.resources
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.PLAYWITHFRIENDS.resources
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.Properties.Resources.resources
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.csproj.GenerateResource.cache
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.exe
+E:\Đồ án OOP\Code\CATchingFish\obj\Debug\CATchingFish.pdb

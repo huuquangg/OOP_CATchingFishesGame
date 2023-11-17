@@ -15,6 +15,14 @@ namespace CATchingFish
         public PLAYWITHFRIENDS()
         {
             InitializeComponent();
+
+            //click on Button_FH to invisible panel
+
+            Button Button_FH = new Button();
+            Button_FH.Click += FirstHandButton_Click;
+
+
+            Controls.Add(Button_FH);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -27,9 +35,10 @@ namespace CATchingFish
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FirstHandButton_Click(object sender, EventArgs e)
         {
-
+            // panel invisible
+            FirstHand.Visible = !FirstHand.Visible;
         }
 
         private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
@@ -42,6 +51,9 @@ namespace CATchingFish
            
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
