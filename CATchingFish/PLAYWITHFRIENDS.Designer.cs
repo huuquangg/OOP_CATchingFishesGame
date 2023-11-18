@@ -28,24 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button SecondHandButton;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PLAYWITHFRIENDS));
             this.Table = new System.Windows.Forms.TableLayoutPanel();
-            this.FirstHand = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.SecondHand = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ThirdHand = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ThirdHandButton = new System.Windows.Forms.Button();
             this.FourthHand = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.FourthHandButton = new System.Windows.Forms.Button();
+            this.FirstHandPanel = new System.Windows.Forms.Panel();
+            this.FirstHandButton = new System.Windows.Forms.Button();
+            SecondHandButton = new System.Windows.Forms.Button();
             this.Table.SuspendLayout();
-            this.FirstHand.SuspendLayout();
             this.SecondHand.SuspendLayout();
             this.ThirdHand.SuspendLayout();
             this.FourthHand.SuspendLayout();
+            this.FirstHandPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SecondHandButton
+            // 
+            SecondHandButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            SecondHandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            SecondHandButton.Location = new System.Drawing.Point(19, 24);
+            SecondHandButton.Name = "SecondHandButton";
+            SecondHandButton.Size = new System.Drawing.Size(195, 155);
+            SecondHandButton.TabIndex = 0;
+            SecondHandButton.Text = " ";
+            SecondHandButton.UseVisualStyleBackColor = true;
+            SecondHandButton.Visible = false;
             // 
             // Table
             // 
@@ -60,7 +73,7 @@
             this.Table.Controls.Add(this.panel5, 1, 2);
             this.Table.Controls.Add(this.ThirdHand, 0, 2);
             this.Table.Controls.Add(this.FourthHand, 2, 2);
-            this.Table.Controls.Add(this.FirstHand, 0, 0);
+            this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
             this.Table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Table.Location = new System.Drawing.Point(0, 0);
             this.Table.Name = "Table";
@@ -71,55 +84,17 @@
             this.Table.Size = new System.Drawing.Size(971, 595);
             this.Table.TabIndex = 1;
             // 
-            // FirstHand
-            // 
-            this.FirstHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHand.BackgroundImage")));
-            this.FirstHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FirstHand.Controls.Add(this.button2);
-            this.FirstHand.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.FirstHand.Location = new System.Drawing.Point(0, 0);
-            this.FirstHand.Margin = new System.Windows.Forms.Padding(0);
-            this.FirstHand.Name = "FirstHand";
-            this.FirstHand.Size = new System.Drawing.Size(236, 198);
-            this.FirstHand.TabIndex = 4;
-            this.FirstHand.UseWaitCursor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 155);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Button_FH";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
-            // 
             // SecondHand
             // 
             this.SecondHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SecondHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SecondHand.BackgroundImage")));
             this.SecondHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SecondHand.Controls.Add(this.button1);
+            this.SecondHand.Controls.Add(SecondHandButton);
             this.SecondHand.Location = new System.Drawing.Point(735, 0);
             this.SecondHand.Margin = new System.Windows.Forms.Padding(0);
             this.SecondHand.Name = "SecondHand";
             this.SecondHand.Size = new System.Drawing.Size(236, 194);
             this.SecondHand.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(19, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 155);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             // 
             // panel4
             // 
@@ -149,46 +124,73 @@
             this.ThirdHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ThirdHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ThirdHand.BackgroundImage")));
             this.ThirdHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ThirdHand.Controls.Add(this.button3);
+            this.ThirdHand.Controls.Add(this.ThirdHandButton);
             this.ThirdHand.Location = new System.Drawing.Point(3, 399);
             this.ThirdHand.Name = "ThirdHand";
             this.ThirdHand.Size = new System.Drawing.Size(236, 193);
             this.ThirdHand.TabIndex = 3;
             // 
-            // button3
+            // ThirdHandButton
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 155);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
+            this.ThirdHandButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ThirdHandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ThirdHandButton.Location = new System.Drawing.Point(9, 18);
+            this.ThirdHandButton.Name = "ThirdHandButton";
+            this.ThirdHandButton.Size = new System.Drawing.Size(195, 155);
+            this.ThirdHandButton.TabIndex = 2;
+            this.ThirdHandButton.Text = " ";
+            this.ThirdHandButton.UseVisualStyleBackColor = true;
+            this.ThirdHandButton.Visible = false;
             // 
             // FourthHand
             // 
             this.FourthHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FourthHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FourthHand.BackgroundImage")));
             this.FourthHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FourthHand.Controls.Add(this.button4);
+            this.FourthHand.Controls.Add(this.FourthHandButton);
             this.FourthHand.Location = new System.Drawing.Point(730, 399);
             this.FourthHand.Name = "FourthHand";
             this.FourthHand.Size = new System.Drawing.Size(238, 193);
             this.FourthHand.TabIndex = 4;
             // 
-            // button4
+            // FourthHandButton
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(24, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(195, 155);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
+            this.FourthHandButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FourthHandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FourthHandButton.Location = new System.Drawing.Point(24, 18);
+            this.FourthHandButton.Name = "FourthHandButton";
+            this.FourthHandButton.Size = new System.Drawing.Size(195, 155);
+            this.FourthHandButton.TabIndex = 3;
+            this.FourthHandButton.Text = " ";
+            this.FourthHandButton.UseVisualStyleBackColor = true;
+            this.FourthHandButton.Visible = false;
+            // 
+            // FirstHandPanel
+            // 
+            this.FirstHandPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHandPanel.BackgroundImage")));
+            this.FirstHandPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FirstHandPanel.Controls.Add(this.FirstHandButton);
+            this.FirstHandPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FirstHandPanel.Location = new System.Drawing.Point(0, 0);
+            this.FirstHandPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.FirstHandPanel.Name = "FirstHandPanel";
+            this.FirstHandPanel.Size = new System.Drawing.Size(236, 198);
+            this.FirstHandPanel.TabIndex = 4;
+            // 
+            // FirstHandButton
+            // 
+            this.FirstHandButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.FirstHandButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FirstHandButton.FlatAppearance.BorderSize = 0;
+            this.FirstHandButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.FirstHandButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.FirstHandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstHandButton.Location = new System.Drawing.Point(12, 24);
+            this.FirstHandButton.Name = "FirstHandButton";
+            this.FirstHandButton.Size = new System.Drawing.Size(195, 155);
+            this.FirstHandButton.TabIndex = 1;
+            this.FirstHandButton.Text = " ";
+            this.FirstHandButton.UseVisualStyleBackColor = true;
             // 
             // PLAYWITHFRIENDS
             // 
@@ -202,10 +204,10 @@
             this.Load += new System.EventHandler(this.PLAYWITHFRIENDS_Load);
             this.Table.ResumeLayout(false);
             this.Table.PerformLayout();
-            this.FirstHand.ResumeLayout(false);
             this.SecondHand.ResumeLayout(false);
             this.ThirdHand.ResumeLayout(false);
             this.FourthHand.ResumeLayout(false);
+            this.FirstHandPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,11 +220,10 @@
         private System.Windows.Forms.Panel ThirdHand;
         private System.Windows.Forms.Panel FourthHand;
         private System.Windows.Forms.Panel SecondHand;
-        private System.Windows.Forms.Panel FirstHand;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel FirstHandPanel;
+        private System.Windows.Forms.Button ThirdHandButton;
+        private System.Windows.Forms.Button FourthHandButton;
+        private System.Windows.Forms.Button FirstHandButton;
     }
 }
 

@@ -12,17 +12,16 @@ namespace CATchingFish
 {
     public partial class PLAYWITHFRIENDS : Form
     {
+        private Timer panelTimer; // Timer to make the panel invisible after 2 seconds
         public PLAYWITHFRIENDS()
         {
             InitializeComponent();
 
-            //click on Button_FH to invisible panel
-
-            Button Button_FH = new Button();
-            Button_FH.Click += FirstHandButton_Click;
-
-
-            Controls.Add(Button_FH);
+            panelTimer = new Timer();
+            panelTimer.Interval = 1000;
+            FirstHandButton.Click += FirstHandButton_Click;
+            panelTimer.Tick += PanelTimer_Tick;
+             
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -37,8 +36,14 @@ namespace CATchingFish
 
         private void FirstHandButton_Click(object sender, EventArgs e)
         {
-            // panel invisible
-            FirstHand.Visible = !FirstHand.Visible;
+            // Timer event handler - make the panel invisible when the timer ticks
+            FirstHandPanel.Visible = !FirstHandPanel.Visible;
+            panelTimer.Start();
+        }
+        private void PanelTimer_Tick(object sender, EventArgs e)
+        {
+            panelTimer.Stop(); // Stop the timer
+            FirstHandPanel.Visible = !FirstHandPanel.Visible;
         }
 
         private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
