@@ -17,33 +17,54 @@ namespace CATchingFish
         {
             InitializeComponent();
 
+            // Add the timer and set its properties
             panelTimer = new Timer();
             panelTimer.Interval = 1000;
-            FirstHandButton.Click += FirstHandButton_Click;
+
+            // Add the event handler for the button (Optional)
+            // FirstHandButton.Click += FirstHandButton_Click;
+
+            // Add the event handler for the timer
             panelTimer.Tick += PanelTimer_Tick;
-             
+
+            // Add the event handler when pressing the Q key (First Player)
+            this.KeyPress += q_pressed_event;
+            this.KeyPreview = true;
+        }
+
+        // Event handler when pressing the Q key (First Player)
+        private void q_pressed_event(object sender, KeyPressEventArgs e)
+        {
+            if (Char.ToLower(e.KeyChar) == 'q')
+            {
+                // Timer event handler - make the panel invisible when the timer ticks
+                FirstHandPanel.Visible = false;
+                panelTimer.Start();
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void FirstHandButton_Click(object sender, EventArgs e)
-        {
-            // Timer event handler - make the panel invisible when the timer ticks
-            FirstHandPanel.Visible = !FirstHandPanel.Visible;
-            panelTimer.Start();
-        }
-        private void PanelTimer_Tick(object sender, EventArgs e)
+/*       Event handler for the button (Optional)
+         private void FirstHandButton_Click(object sender, EventArgs e) // FirstHandButton click event handler
+         {
+         // Timer event handler - make the panel invisible when the timer ticks
+         FirstHandPanel.Visible = !FirstHandPanel.Visible;
+         panelTimer.Start();
+         }
+*/
+        // Timer event handler
+        private void PanelTimer_Tick(object sender, EventArgs e) 
         {
             panelTimer.Stop(); // Stop the timer
-            FirstHandPanel.Visible = !FirstHandPanel.Visible;
+            FirstHandPanel.Visible = true;
         }
 
         private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
@@ -54,11 +75,6 @@ namespace CATchingFish
         private void PLAYWITHFRIENDS_FormClosing(object sender, FormClosingEventArgs e)
         {
            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

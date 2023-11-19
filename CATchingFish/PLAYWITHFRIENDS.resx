@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="SecondHandButton.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Table.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -452,7 +449,7 @@
   <data name="SecondHand.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAADFCAYAAAA/g5zSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAQqZJREFUeF7tnQeYVdXVhv+RNkyDKQxDG4ZhKMIwoDRpOgKiiGJFRSxEDRoFWzDW
+        vAAADrwBlbxySQAAQqZJREFUeF7tnQeYVdXVhv+RNkyDKQxDG4ZhKMIwoDRpOgKiiGJFRSxEDRoFWzDW
         iIp5jP23JUosvxp7ix17Lxg1Ro0VxRpRFEVs2M7/vTuzbvYc79DmTt/f86xnn3bPPefs9e21y9pr/09A
         QEBAQEBAQPPFtGnTWu2www6FG2200YAOHTrkVh0OCAhINaIoSps3b17RoEGDflVYWHhDenr6XTo84T9n
         AwICUoqhQ4e2KSoq+l1mZuai1q1bf5mWlvb9BhtssECnuvznioCAgFpDVq31xIkTi8vLy48Q2V4RyX4Q
@@ -742,7 +739,7 @@
   <data name="ThirdHand.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAADFCAYAAAA/g5zSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAANdBJREFUeF7tnQmYVcWZ9xOV3ugNaGh2mk2RVUAEwQghIqiIoIIEVBCQtZt9UUNE
+        vAAADrwBlbxySQAANdBJREFUeF7tnQmYVcWZ9xOV3ugNaGh2mk2RVUAEwQghIqiIoIIEVBCQtZt9UUNE
         E7coghr9FBVwwURRXGJUcE2MJvppZkbjjF+iTsboJBl1HIwLoOD93l/N/Z+n7oJsTXff2/U+z/+p5Zx7
         7qmq919v7edbQYIECVJvJRaLfTvudbJgwYL8sWPH5kyZMqVoxYoVebNnzy606MMWL17ccPr06Q3Mz/2H
         cq9dPwQ3SJAgeyHz5s0rNyK179y587B+Jo0aNZrRvXv3swsKCm7u2LHjkpycnLtLSkquPOSQQ+5o0KDB
@@ -978,7 +975,7 @@
   <data name="FourthHand.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANwAAADFCAYAAAA/g5zSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAkSZJREFUeF7tvQeYVdeVJVwvVwCKLKISQoGMiEVRReWcA5UzRRIgJGElSwZbOSGJ
+        vAAADrwBlbxySQAAkSZJREFUeF7tvQeYVdeVJVwvVwCKLKISQoGMiEVRReWcA5UzRRIgJGElSwZbOSGJ
         UPG9QrItuy1nS5aVIwIBlaEKJLu7p6dnpmemJ/wdPS1b2v9a+7xLFVAlI4EkQO983/7ue+/el+4566yd
         zj5BgRZogRZogRZogRZogRZogfaNaNXbtwf7H3ogceZh0JzCwsKr0K6LjIy8fMaMyybu2rWL5+3mdKAF
         WqCdVdu+dm1o5JLI2aNGjNkYEhL2gxnXXvt4kMP5E5z6d5vN9k+Q/+xwOP7Z4/F85HQ6/xgWFtYe7Lb/
