@@ -45,6 +45,7 @@
             // 
             // Table
             // 
+            this.Table.AutoSize = true;
             this.Table.BackColor = System.Drawing.Color.Transparent;
             this.Table.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Table.BackgroundImage")));
             this.Table.ColumnCount = 3;
@@ -58,6 +59,7 @@
             this.Table.Controls.Add(this.FourthHand, 2, 2);
             this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
             this.Table.Controls.Add(this.Plate, 1, 1);
+            this.Table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Table.Location = new System.Drawing.Point(0, 0);
             this.Table.Name = "Table";
             this.Table.RowCount = 3;
@@ -136,8 +138,8 @@
             // 
             this.Plate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plate.BackgroundImage")));
             this.Plate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Plate.Controls.Add(this.Fishes);
             this.Plate.Controls.Add(this.Bone);
+            this.Plate.Controls.Add(this.Fishes);
             this.Plate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Plate.Location = new System.Drawing.Point(245, 201);
             this.Plate.Name = "Plate";
@@ -147,27 +149,29 @@
             // 
             // Fishes
             // 
-            this.Fishes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
             this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Fishes.Location = new System.Drawing.Point(142, 3);
+            this.Fishes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fishes.Location = new System.Drawing.Point(0, 0);
             this.Fishes.Name = "Fishes";
-            this.Fishes.Size = new System.Drawing.Size(182, 186);
+            this.Fishes.Size = new System.Drawing.Size(479, 192);
             this.Fishes.TabIndex = 0;
             // 
             // Bone
             // 
             this.Bone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bone.BackgroundImage")));
             this.Bone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Bone.Location = new System.Drawing.Point(123, 19);
+            this.Bone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bone.Location = new System.Drawing.Point(0, 0);
             this.Bone.Name = "Bone";
-            this.Bone.Size = new System.Drawing.Size(232, 153);
+            this.Bone.Size = new System.Drawing.Size(479, 192);
             this.Bone.TabIndex = 1;
             // 
             // PLAYWITHFRIENDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(971, 595);
             this.Controls.Add(this.Table);
@@ -178,6 +182,7 @@
             this.Table.PerformLayout();
             this.Plate.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
