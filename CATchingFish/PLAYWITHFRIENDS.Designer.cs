@@ -36,7 +36,11 @@
             this.ThirdHand = new System.Windows.Forms.Panel();
             this.FourthHand = new System.Windows.Forms.Panel();
             this.FirstHandPanel = new System.Windows.Forms.Panel();
+            this.Plate = new System.Windows.Forms.Panel();
+            this.Fishes = new System.Windows.Forms.Panel();
+            this.Bone = new System.Windows.Forms.Panel();
             this.Table.SuspendLayout();
+            this.Plate.SuspendLayout();
             this.SuspendLayout();
             // 
             // Table
@@ -53,7 +57,7 @@
             this.Table.Controls.Add(this.ThirdHand, 0, 2);
             this.Table.Controls.Add(this.FourthHand, 2, 2);
             this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
-            this.Table.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Table.Controls.Add(this.Plate, 1, 1);
             this.Table.Location = new System.Drawing.Point(0, 0);
             this.Table.Name = "Table";
             this.Table.RowCount = 3;
@@ -128,6 +132,38 @@
             this.FirstHandPanel.Size = new System.Drawing.Size(236, 198);
             this.FirstHandPanel.TabIndex = 4;
             // 
+            // Plate
+            // 
+            this.Plate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plate.BackgroundImage")));
+            this.Plate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Plate.Controls.Add(this.Fishes);
+            this.Plate.Controls.Add(this.Bone);
+            this.Plate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Plate.Location = new System.Drawing.Point(245, 201);
+            this.Plate.Name = "Plate";
+            this.Plate.Size = new System.Drawing.Size(479, 192);
+            this.Plate.TabIndex = 6;
+            this.Plate.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Fishes
+            // 
+            this.Fishes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
+            this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Fishes.Location = new System.Drawing.Point(142, 3);
+            this.Fishes.Name = "Fishes";
+            this.Fishes.Size = new System.Drawing.Size(182, 186);
+            this.Fishes.TabIndex = 0;
+            // 
+            // Bone
+            // 
+            this.Bone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bone.BackgroundImage")));
+            this.Bone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Bone.Location = new System.Drawing.Point(123, 19);
+            this.Bone.Name = "Bone";
+            this.Bone.Size = new System.Drawing.Size(232, 153);
+            this.Bone.TabIndex = 1;
+            // 
             // PLAYWITHFRIENDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +176,7 @@
             this.Load += new System.EventHandler(this.PLAYWITHFRIENDS_Load);
             this.Table.ResumeLayout(false);
             this.Table.PerformLayout();
+            this.Plate.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -153,6 +190,9 @@
         private System.Windows.Forms.Panel FourthHand;
         private System.Windows.Forms.Panel SecondHand;
         private System.Windows.Forms.Panel FirstHandPanel;
+        private System.Windows.Forms.Panel Plate;
+        private System.Windows.Forms.Panel Fishes;
+        private System.Windows.Forms.Panel Bone;
     }
 }
 
