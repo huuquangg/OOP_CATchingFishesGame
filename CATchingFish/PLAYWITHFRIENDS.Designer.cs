@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PLAYWITHFRIENDS));
             this.Table = new System.Windows.Forms.TableLayoutPanel();
             this.SecondHand = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.ThirdHand = new System.Windows.Forms.Panel();
             this.FourthHand = new System.Windows.Forms.Panel();
-            this.FirstHandPanel = new System.Windows.Forms.Panel();
             this.Plate = new System.Windows.Forms.Panel();
             this.Fishes = new System.Windows.Forms.Panel();
             this.Bone = new System.Windows.Forms.Panel();
+            this.FirstHandPanel = new System.Windows.Forms.Panel();
             this.Table.SuspendLayout();
             this.Plate.SuspendLayout();
             this.SuspendLayout();
@@ -52,12 +50,10 @@
             this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
             this.Table.Controls.Add(this.SecondHand, 2, 0);
-            this.Table.Controls.Add(this.panel4, 1, 0);
-            this.Table.Controls.Add(this.panel5, 1, 2);
             this.Table.Controls.Add(this.ThirdHand, 0, 2);
             this.Table.Controls.Add(this.FourthHand, 2, 2);
-            this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
             this.Table.Controls.Add(this.Plate, 1, 1);
             this.Table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Table.Location = new System.Drawing.Point(0, 0);
@@ -80,29 +76,6 @@
             this.SecondHand.Size = new System.Drawing.Size(236, 194);
             this.SecondHand.TabIndex = 5;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(245, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(479, 192);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.AutoSize = true;
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(245, 399);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(479, 193);
-            this.panel5.TabIndex = 2;
-            // 
             // ThirdHand
             // 
             this.ThirdHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -122,17 +95,6 @@
             this.FourthHand.Name = "FourthHand";
             this.FourthHand.Size = new System.Drawing.Size(238, 193);
             this.FourthHand.TabIndex = 4;
-            // 
-            // FirstHandPanel
-            // 
-            this.FirstHandPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHandPanel.BackgroundImage")));
-            this.FirstHandPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FirstHandPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FirstHandPanel.Location = new System.Drawing.Point(0, 0);
-            this.FirstHandPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.FirstHandPanel.Name = "FirstHandPanel";
-            this.FirstHandPanel.Size = new System.Drawing.Size(236, 198);
-            this.FirstHandPanel.TabIndex = 4;
             // 
             // Plate
             // 
@@ -167,6 +129,18 @@
             this.Bone.Size = new System.Drawing.Size(479, 192);
             this.Bone.TabIndex = 1;
             // 
+            // FirstHandPanel
+            // 
+            this.FirstHandPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHandPanel.BackgroundImage")));
+            this.FirstHandPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FirstHandPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FirstHandPanel.Location = new System.Drawing.Point(0, 0);
+            this.FirstHandPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.FirstHandPanel.Name = "FirstHandPanel";
+            this.FirstHandPanel.Size = new System.Drawing.Size(236, 198);
+            this.FirstHandPanel.TabIndex = 4;
+            this.FirstHandPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FirstHandPanel_Paint);
+            // 
             // PLAYWITHFRIENDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,7 +153,6 @@
             this.Text = "PLAY WITH FRIENDS";
             this.Load += new System.EventHandler(this.PLAYWITHFRIENDS_Load);
             this.Table.ResumeLayout(false);
-            this.Table.PerformLayout();
             this.Plate.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,15 +162,13 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel Table;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel ThirdHand;
         private System.Windows.Forms.Panel FourthHand;
         private System.Windows.Forms.Panel SecondHand;
-        private System.Windows.Forms.Panel FirstHandPanel;
         private System.Windows.Forms.Panel Plate;
         private System.Windows.Forms.Panel Fishes;
         private System.Windows.Forms.Panel Bone;
+        private System.Windows.Forms.Panel FirstHandPanel;
     }
 }
 

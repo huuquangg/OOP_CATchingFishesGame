@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CATchingFish
@@ -30,8 +23,8 @@ namespace CATchingFish
             panelTimer.Tick += PanelTimer_Tick;
 
             // Add the event handler when pressing the Q key (First Player)
-            this.KeyPress += q_pressed_event;
-            this.KeyPreview = true;
+            //this.KeyPress += q_pressed_event;
+            //this.KeyPreview = true;
 
             // auto Display the fishes in the plate after a random time from 2 to 3 seconds
 
@@ -48,12 +41,10 @@ namespace CATchingFish
             NoFishesInthePlate.Interval = generateRandomNumber();
             NoFishesInthePlate.Tick += Disappear;
             NoFishesInthePlate.Start();
-
-
         }
 
         // Event handler when pressing the Q key (First Player)
-        private void q_pressed_event(object sender, KeyPressEventArgs e)
+/*        private void q_pressed_event(object sender, KeyPressEventArgs e)
         {
             if (Char.ToLower(e.KeyChar) == 'q')
             {
@@ -62,10 +53,22 @@ namespace CATchingFish
                 panelTimer.Start();
             }
         }
-
+*/
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        // Event handler when pressing the Q key (First Player)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Q)
+            {
+                // Timer event handler - make the panel invisible when the timer ticks
+                FirstHandPanel.Visible = false;
+                panelTimer.Start();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -140,10 +143,14 @@ namespace CATchingFish
         private object generateRandomFishesOrBone()
         {
             Random rnd = new Random();
-            object[] Food = { Fishes ,Bone};
+            object[] Food = { Fishes, Bone };
             int num = rnd.Next(0, 2);
             return Food[num];
         }
 
+        private void FirstHandPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
