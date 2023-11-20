@@ -52,3 +52,14 @@ E:\University\V OOP\doanoop\v1.0.6\CATchingFish\obj\Debug\CATchingFish.csproj.Ge
 E:\University\V OOP\doanoop\v1.0.6\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
 E:\University\V OOP\doanoop\v1.0.6\CATchingFish\obj\Debug\CATchingFish.exe
 E:\University\V OOP\doanoop\v1.0.6\CATchingFish\obj\Debug\CATchingFish.pdb
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.exe.config
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.exe
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\bin\Debug\CATchingFish.pdb
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.AssemblyReference.cache
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.HomeScreen.resources
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.PLAYWITHFRIENDS.resources
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.Properties.Resources.resources
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.GenerateResource.cache
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.exe
+C:\Users\ASUS\Source\Repos\CATchingFishes_OOP\CATchingFish\obj\Debug\CATchingFish.pdb

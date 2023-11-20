@@ -14,6 +14,7 @@ namespace CATchingFish
     {
         private Timer panelTimer; // Timer to make the panel invisible after 2 seconds
         private Timer FillFishesInthePlate; // Timer to fill the plate with fishes
+        private Timer NoFishesInthePlate;
         public PLAYWITHFRIENDS()
         {
             InitializeComponent();
@@ -43,10 +44,10 @@ namespace CATchingFish
             FillFishesInthePlate.Start();
 
             // auto Disappear the fishes in the plate after a random time from 2 to 3 seconds
-            //FillFishesInthePlate = new Timer();
-            //FillFishesInthePlate.Interval = generateRandomNumber();
-            FillFishesInthePlate.Tick += Disappear;
-            //FillFishesInthePlate.Start();
+            NoFishesInthePlate = new Timer();
+            NoFishesInthePlate.Interval = generateRandomNumber();
+            NoFishesInthePlate.Tick += Disappear;
+            NoFishesInthePlate.Start();
 
 
         }
@@ -117,20 +118,22 @@ namespace CATchingFish
                 Bone.Visible = true;
                 Bone.BringToFront();
             }
-            FillFishesInthePlate.Start();
+            FillFishesInthePlate.Stop();
+            NoFishesInthePlate.Start();
         }
 
         private void Disappear(object sender, EventArgs e)
         {
             Bone.Visible = false;
             Fishes.Visible = false;
-            FillFishesInthePlate.Stop();
+            NoFishesInthePlate.Stop();
+            FillFishesInthePlate.Start();
         }
 
         private int generateRandomNumber()
         {
             Random rnd = new Random();
-            int num = rnd.Next(1000, 1500);
+            int num = rnd.Next(2000, 3500);
             return num;
         }
 
