@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PLAYWITHFRIENDS));
             this.Table = new System.Windows.Forms.TableLayoutPanel();
+            this.FirstHandPanel = new System.Windows.Forms.Panel();
             this.SecondHand = new System.Windows.Forms.Panel();
             this.ThirdHand = new System.Windows.Forms.Panel();
             this.FourthHand = new System.Windows.Forms.Panel();
             this.Plate = new System.Windows.Forms.Panel();
-            this.Fishes = new System.Windows.Forms.Panel();
             this.Bone = new System.Windows.Forms.Panel();
-            this.FirstHandPanel = new System.Windows.Forms.Panel();
+            this.Fishes = new System.Windows.Forms.Panel();
             this.Table.SuspendLayout();
             this.Plate.SuspendLayout();
             this.SuspendLayout();
@@ -45,11 +45,10 @@
             // 
             this.Table.AutoSize = true;
             this.Table.BackColor = System.Drawing.Color.Transparent;
-            this.Table.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Table.BackgroundImage")));
             this.Table.ColumnCount = 3;
-            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.Table.Controls.Add(this.FirstHandPanel, 0, 0);
             this.Table.Controls.Add(this.SecondHand, 2, 0);
             this.Table.Controls.Add(this.ThirdHand, 0, 2);
@@ -65,32 +64,45 @@
             this.Table.Size = new System.Drawing.Size(971, 595);
             this.Table.TabIndex = 1;
             // 
+            // FirstHandPanel
+            // 
+            this.FirstHandPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHandPanel.BackgroundImage")));
+            this.FirstHandPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FirstHandPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FirstHandPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FirstHandPanel.Location = new System.Drawing.Point(0, 0);
+            this.FirstHandPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.FirstHandPanel.Name = "FirstHandPanel";
+            this.FirstHandPanel.Size = new System.Drawing.Size(206, 198);
+            this.FirstHandPanel.TabIndex = 4;
+            this.FirstHandPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FirstHandPanel_Paint);
+            // 
             // SecondHand
             // 
-            this.SecondHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SecondHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SecondHand.BackgroundImage")));
             this.SecondHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SecondHand.Dock = System.Windows.Forms.DockStyle.Right;
             this.SecondHand.Location = new System.Drawing.Point(735, 0);
             this.SecondHand.Margin = new System.Windows.Forms.Padding(0);
             this.SecondHand.Name = "SecondHand";
-            this.SecondHand.Size = new System.Drawing.Size(236, 194);
+            this.SecondHand.Size = new System.Drawing.Size(236, 198);
             this.SecondHand.TabIndex = 5;
             // 
             // ThirdHand
             // 
-            this.ThirdHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ThirdHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ThirdHand.BackgroundImage")));
             this.ThirdHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ThirdHand.Dock = System.Windows.Forms.DockStyle.Left;
             this.ThirdHand.Location = new System.Drawing.Point(3, 399);
             this.ThirdHand.Name = "ThirdHand";
-            this.ThirdHand.Size = new System.Drawing.Size(236, 193);
+            this.ThirdHand.Size = new System.Drawing.Size(203, 193);
             this.ThirdHand.TabIndex = 3;
             // 
             // FourthHand
             // 
-            this.FourthHand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FourthHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FourthHand.BackgroundImage")));
             this.FourthHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FourthHand.Dock = System.Windows.Forms.DockStyle.Right;
             this.FourthHand.Location = new System.Drawing.Point(730, 399);
             this.FourthHand.Name = "FourthHand";
             this.FourthHand.Size = new System.Drawing.Size(238, 193);
@@ -103,21 +115,11 @@
             this.Plate.Controls.Add(this.Bone);
             this.Plate.Controls.Add(this.Fishes);
             this.Plate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Plate.Location = new System.Drawing.Point(245, 201);
+            this.Plate.Location = new System.Drawing.Point(391, 201);
             this.Plate.Name = "Plate";
-            this.Plate.Size = new System.Drawing.Size(479, 192);
+            this.Plate.Size = new System.Drawing.Size(188, 192);
             this.Plate.TabIndex = 6;
             this.Plate.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // Fishes
-            // 
-            this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
-            this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Fishes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fishes.Location = new System.Drawing.Point(0, 0);
-            this.Fishes.Name = "Fishes";
-            this.Fishes.Size = new System.Drawing.Size(479, 192);
-            this.Fishes.TabIndex = 0;
             // 
             // Bone
             // 
@@ -126,29 +128,28 @@
             this.Bone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Bone.Location = new System.Drawing.Point(0, 0);
             this.Bone.Name = "Bone";
-            this.Bone.Size = new System.Drawing.Size(479, 192);
+            this.Bone.Size = new System.Drawing.Size(188, 192);
             this.Bone.TabIndex = 1;
             // 
-            // FirstHandPanel
+            // Fishes
             // 
-            this.FirstHandPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstHandPanel.BackgroundImage")));
-            this.FirstHandPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FirstHandPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FirstHandPanel.Location = new System.Drawing.Point(0, 0);
-            this.FirstHandPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.FirstHandPanel.Name = "FirstHandPanel";
-            this.FirstHandPanel.Size = new System.Drawing.Size(236, 198);
-            this.FirstHandPanel.TabIndex = 4;
-            this.FirstHandPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FirstHandPanel_Paint);
+            this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
+            this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Fishes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fishes.Location = new System.Drawing.Point(0, 0);
+            this.Fishes.Name = "Fishes";
+            this.Fishes.Size = new System.Drawing.Size(188, 192);
+            this.Fishes.TabIndex = 0;
             // 
             // PLAYWITHFRIENDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(971, 595);
             this.Controls.Add(this.Table);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PLAYWITHFRIENDS";
             this.Text = "PLAY WITH FRIENDS";
             this.Load += new System.EventHandler(this.PLAYWITHFRIENDS_Load);
