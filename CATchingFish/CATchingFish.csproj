@@ -98,5 +98,8 @@
   <ItemGroup>
     <Folder Include="Resources\img\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="BGMusic.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

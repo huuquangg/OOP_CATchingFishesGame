@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace CATchingFish
@@ -7,7 +8,8 @@ namespace CATchingFish
     {
         private Timer panelTimer; // Timer to make the panel invisible after 2 seconds
         private Timer FillFishesInthePlate; // Timer to fill the plate with fishes
-        private Timer NoFishesInthePlate;
+        private Timer NoFishesInthePlate; // Timer to make the fishes disappear from the plate
+        private int Player1_score = 0; // Score of the player 1
         public PLAYWITHFRIENDS()
         {
             InitializeComponent();
@@ -18,6 +20,9 @@ namespace CATchingFish
 
             // Add the event handler for the timer
             panelTimer.Tick += PanelTimer_Tick;
+
+            // Play background music
+            LoopMusic();
 
             FirstLongHand.Visible = false;
             SecondLongHand.Visible = false;
@@ -30,7 +35,13 @@ namespace CATchingFish
             // auto Disappear the fishes in the plate after a random time from 2 to 3 seconds
             DisappearFoodOnPlate();
         }
-
+        // Play background music
+        private void LoopMusic()
+        {
+            string musicFilePath = Application.StartupPath + "\\BGMusic.wav";
+            SoundPlayer BGMusic = new SoundPlayer(musicFilePath);
+            BGMusic.PlayLooping();
+        }
         protected void FillFoodOnPlate()
         {
             FillFishesInthePlate = new Timer();
@@ -45,6 +56,19 @@ namespace CATchingFish
             NoFishesInthePlate.Tick += Disappear;
             NoFishesInthePlate.Start();
         }
+        // Check collision between the hand and the food
+        protected int CatfishOrBone()
+        {
+            if (FirstHandPanel.Bounds.IntersectsWith(Fishes.Bounds))
+            {
+                return 1;
+            }    
+            else if (FirstHandPanel.Bounds.IntersectsWith(Bone.Bounds))
+            {
+                return -1;
+            }
+            return 0;
+        }   
 
         // Event handler when pressing the Q key (First Player)
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -55,18 +79,14 @@ namespace CATchingFish
                 FirstHandPanel.Visible = false;
                 if (FirstHandPanel.Visible == false) FirstLongHand.Visible = true;
 
-                // Code duoi la psudocode de mota logic cong/ tru diem
+/*                // Code duoi la psudocode de mota logic cong/ tru diem
                 if (FirstLongHand.Visible && FillFishesInthePlate.Enabled && Fishes.Visible)
                     // Score++
                     DisappearFoodOnPlate();
                 if (FirstLongHand.Visible && FillFishesInthePlate.Enabled && !Fishes.Visible)
                     // Score--
-                    DisappearFoodOnPlate();
-
-
+                    DisappearFoodOnPlate();*/
                 panelTimer.Start();
-
-
                 return true;
             }
 
@@ -104,6 +124,23 @@ namespace CATchingFish
         // Timer event handler
         private void PanelTimer_Tick(object sender, EventArgs e)
         {
+            if (CatfishOrBone() == 1)
+            {
+                // Score++
+                Player1_score++;
+                Player1Score.Text = Player1_score.ToString();
+            }
+            else if (CatfishOrBone() == -1)
+            {
+                // Score--
+                Player1_score--;
+                Player1Score.Text = Player1_score.ToString();
+            }
+            else
+            {
+                // Do nothing
+            }
+            
             panelTimer.Stop(); // Stop the timer
             HandControl(FirstHandPanel, FirstLongHand);
             HandControl(SecondHand, SecondLongHand);

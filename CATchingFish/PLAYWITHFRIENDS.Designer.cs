@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PLAYWITHFRIENDS));
             this.Table = new System.Windows.Forms.TableLayoutPanel();
+            this.Plate = new System.Windows.Forms.Panel();
+            this.Bone = new System.Windows.Forms.Panel();
+            this.Fishes = new System.Windows.Forms.Panel();
             this.FirstHandPanel = new System.Windows.Forms.Panel();
             this.SecondHand = new System.Windows.Forms.Panel();
             this.ThirdHand = new System.Windows.Forms.Panel();
             this.FourthHand = new System.Windows.Forms.Panel();
-            this.Plate = new System.Windows.Forms.Panel();
-            this.Fishes = new System.Windows.Forms.Panel();
-            this.Bone = new System.Windows.Forms.Panel();
             this.FirstLongHand = new System.Windows.Forms.Panel();
             this.SecondLongHand = new System.Windows.Forms.Panel();
             this.ThirdLongHand = new System.Windows.Forms.Panel();
             this.FourthLongHand = new System.Windows.Forms.Panel();
+            this.Player1Score = new System.Windows.Forms.Button();
             this.Table.SuspendLayout();
             this.Plate.SuspendLayout();
+            this.FirstLongHand.SuspendLayout();
             this.SuspendLayout();
             // 
             // Table
@@ -67,6 +69,38 @@
             this.Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.Table.Size = new System.Drawing.Size(971, 595);
             this.Table.TabIndex = 1;
+            // 
+            // Plate
+            // 
+            this.Plate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plate.BackgroundImage")));
+            this.Plate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Plate.Controls.Add(this.Bone);
+            this.Plate.Controls.Add(this.Fishes);
+            this.Plate.Location = new System.Drawing.Point(391, 201);
+            this.Plate.Name = "Plate";
+            this.Plate.Size = new System.Drawing.Size(188, 192);
+            this.Plate.TabIndex = 6;
+            this.Plate.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Bone
+            // 
+            this.Bone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bone.BackgroundImage")));
+            this.Bone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Bone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bone.Location = new System.Drawing.Point(0, 0);
+            this.Bone.Name = "Bone";
+            this.Bone.Size = new System.Drawing.Size(188, 192);
+            this.Bone.TabIndex = 1;
+            // 
+            // Fishes
+            // 
+            this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
+            this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Fishes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Fishes.Location = new System.Drawing.Point(0, 0);
+            this.Fishes.Name = "Fishes";
+            this.Fishes.Size = new System.Drawing.Size(188, 192);
+            this.Fishes.TabIndex = 0;
             // 
             // FirstHandPanel
             // 
@@ -112,43 +146,12 @@
             this.FourthHand.Size = new System.Drawing.Size(238, 193);
             this.FourthHand.TabIndex = 4;
             // 
-            // Plate
-            // 
-            this.Plate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plate.BackgroundImage")));
-            this.Plate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Plate.Controls.Add(this.Bone);
-            this.Plate.Controls.Add(this.Fishes);
-            this.Plate.Location = new System.Drawing.Point(391, 201);
-            this.Plate.Name = "Plate";
-            this.Plate.Size = new System.Drawing.Size(188, 192);
-            this.Plate.TabIndex = 6;
-            this.Plate.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // Fishes
-            // 
-            this.Fishes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fishes.BackgroundImage")));
-            this.Fishes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Fishes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fishes.Location = new System.Drawing.Point(0, 0);
-            this.Fishes.Name = "Fishes";
-            this.Fishes.Size = new System.Drawing.Size(188, 192);
-            this.Fishes.TabIndex = 0;
-            // 
-            // Bone
-            // 
-            this.Bone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bone.BackgroundImage")));
-            this.Bone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Bone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Bone.Location = new System.Drawing.Point(0, 0);
-            this.Bone.Name = "Bone";
-            this.Bone.Size = new System.Drawing.Size(188, 192);
-            this.Bone.TabIndex = 1;
-            // 
             // FirstLongHand
             // 
             this.FirstLongHand.BackColor = System.Drawing.Color.Transparent;
             this.FirstLongHand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstLongHand.BackgroundImage")));
             this.FirstLongHand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FirstLongHand.Controls.Add(this.Player1Score);
             this.FirstLongHand.Location = new System.Drawing.Point(3, 0);
             this.FirstLongHand.Name = "FirstLongHand";
             this.FirstLongHand.Size = new System.Drawing.Size(467, 297);
@@ -184,6 +187,15 @@
             this.FourthLongHand.Size = new System.Drawing.Size(476, 302);
             this.FourthLongHand.TabIndex = 7;
             // 
+            // Player1Score
+            // 
+            this.Player1Score.Location = new System.Drawing.Point(229, 8);
+            this.Player1Score.Name = "Player1Score";
+            this.Player1Score.Size = new System.Drawing.Size(74, 64);
+            this.Player1Score.TabIndex = 0;
+            this.Player1Score.Text = "0";
+            this.Player1Score.UseVisualStyleBackColor = true;
+            // 
             // PLAYWITHFRIENDS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,6 +214,7 @@
             this.Load += new System.EventHandler(this.PLAYWITHFRIENDS_Load);
             this.Table.ResumeLayout(false);
             this.Plate.ResumeLayout(false);
+            this.FirstLongHand.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +234,7 @@
         private System.Windows.Forms.Panel SecondLongHand;
         private System.Windows.Forms.Panel ThirdLongHand;
         private System.Windows.Forms.Panel FourthLongHand;
+        private System.Windows.Forms.Button Player1Score;
     }
 }
 
