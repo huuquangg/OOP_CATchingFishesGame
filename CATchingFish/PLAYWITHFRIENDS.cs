@@ -19,23 +19,33 @@ namespace CATchingFish
             // Add the event handler for the timer
             panelTimer.Tick += PanelTimer_Tick;
 
-          
+            FirstLongHand.Visible = false;
+            SecondLongHand.Visible = false;
+            ThirdLongHand.Visible = false;
+            FourthLongHand.Visible = false;
             Bone.Visible = false;
             Fishes.Visible = false;
 
+            FillFoodOnPlate();
+            // auto Disappear the fishes in the plate after a random time from 2 to 3 seconds
+            DisappearFoodOnPlate();
+        }
+
+        protected void FillFoodOnPlate()
+        {
             FillFishesInthePlate = new Timer();
             FillFishesInthePlate.Interval = generateRandomNumber();
             FillFishesInthePlate.Tick += DisplayFishesOrBone;
             FillFishesInthePlate.Start();
-
-            // auto Disappear the fishes in the plate after a random time from 2 to 3 seconds
+        }
+        protected void DisappearFoodOnPlate()
+        {
             NoFishesInthePlate = new Timer();
             NoFishesInthePlate.Interval = generateRandomNumber();
             NoFishesInthePlate.Tick += Disappear;
             NoFishesInthePlate.Start();
         }
 
-      
         // Event handler when pressing the Q key (First Player)
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -43,29 +53,70 @@ namespace CATchingFish
             {
                 // Timer event handler - make the panel invisible when the timer ticks
                 FirstHandPanel.Visible = false;
+                if (FirstHandPanel.Visible == false) FirstLongHand.Visible = true;
+
+                // Code duoi la psudocode de mota logic cong/ tru diem
+                if (FirstLongHand.Visible && FillFishesInthePlate.Enabled && Fishes.Visible)
+                    // Score++
+                    DisappearFoodOnPlate();
+                if (FirstLongHand.Visible && FillFishesInthePlate.Enabled && !Fishes.Visible)
+                    // Score--
+                    DisappearFoodOnPlate();
+
+
+                panelTimer.Start();
+
+
+                return true;
+            }
+
+            if (keyData == Keys.E)
+            {
+                // Timer event handler - make the panel invisible when the timer ticks
+                SecondHand.Visible = false;
+                if (SecondHand.Visible == false) SecondLongHand.Visible = true;
                 panelTimer.Start();
                 return true;
             }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
 
+            if (keyData == Keys.Z)
+            {
+                // Timer event handler - make the panel invisible when the timer ticks
+                ThirdHand.Visible = false;
+                if (ThirdHand.Visible == false) ThirdLongHand.Visible = true;
+                panelTimer.Start();
+                return true;
+            }
+
+            if (keyData == Keys.C)
+            {
+                // Timer event handler - make the panel invisible when the timer ticks
+                FourthHand.Visible = false;
+                if (FourthHand.Visible == false) FourthLongHand.Visible = true;
+                panelTimer.Start();
+                return true;
+            }
+
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         // Timer event handler
         private void PanelTimer_Tick(object sender, EventArgs e)
         {
             panelTimer.Stop(); // Stop the timer
-            FirstHandPanel.Visible = true;
+            HandControl(FirstHandPanel, FirstLongHand);
+            HandControl(SecondHand, SecondLongHand);
+            HandControl(ThirdHand, ThirdLongHand);
+            HandControl(FourthHand, FourthLongHand);
         }
 
-        private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
+        protected void HandControl(Panel Short_Hand, Panel Long_Hand)
         {
-
+            Short_Hand.Visible = true;
+            Long_Hand.Visible = false;
         }
-
-        private void PLAYWITHFRIENDS_FormClosing(object sender, FormClosingEventArgs e)
+        private void PLAYWITHFRIENDS_Load(object sender, EventArgs e)
         {
 
         }
@@ -73,6 +124,12 @@ namespace CATchingFish
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public bool isFishOnPlate()
+        {
+            if (Fishes.Visible == true) return true;
+            return false;
         }
 
         private void DisplayFishesOrBone(object sender, EventArgs e)
@@ -95,7 +152,7 @@ namespace CATchingFish
             NoFishesInthePlate.Start();
         }
 
-        private void Disappear(object sender, EventArgs e)
+        public void Disappear(object sender, EventArgs e)
         {
             Bone.Visible = false;
             Fishes.Visible = false;
@@ -122,5 +179,7 @@ namespace CATchingFish
         {
 
         }
+
+
     }
 }
