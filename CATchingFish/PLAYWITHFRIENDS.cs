@@ -1,84 +1,56 @@
 ﻿using System;
 using System.Media;
+using System.Security.Policy;
 using System.Windows.Forms;
+using CATchingFish.Properties;
 
 namespace CATchingFish
 {
     public partial class PLAYWITHFRIENDS : Form
     {
         private Timer panelTimer; // Timer to make the panel invisible after 2 seconds
-        private Timer FillFishesInthePlate; // Timer to fill the plate with fishes
-        private Timer NoFishesInthePlate; // Timer to make the fishes disappear from the plate
-
-        private static int Player1_score = 0; // Score of the player 1
-        private static int Player2_score = 0; // Score of the player 2
-        private static int Player3_score = 0; // Score of the player 3
-        private static int Player4_score = 0; // Score of the player 4
 
         public PLAYWITHFRIENDS()
         {
             InitializeComponent();
-
             // Add the timer and set its properties
             panelTimer = new Timer();
-            panelTimer.Interval = 300;
-
+            panelTimer.Interval = 350;
             // Add the event handler for the timer
             panelTimer.Tick += PanelTimer_Tick;
-
             // Play background music
             LoopMusic();
 
-            FirstLongHand.Visible = false;
-            SecondLongHand.Visible = false;
-            ThirdLongHand.Visible = false;
-            FourthLongHand.Visible = false;
-            Bone.Visible = false;
-            Fishes.Visible = false;
+            Cat1_top_left.setVisiblLongHand(false);
+            Cat2_top_right.setVisiblLongHand(false);
+            Cat3_bottom_left.setVisiblLongHand(false);
+            Cat4_bottom_right.setVisiblLongHand(false);
 
+            //Food
+            food.SetVisibleFish(false);
+            food.SetVisibleBone(false);
 
-            FillFoodOnPlate();
+            food.FillFoodOnPlate();
+            food.DisappearFoodOnPlate();
 
-            // auto Disappear the fishes in the plate after a random time from 2 to 3 seconds
-            DisappearFoodOnPlate();
-
-            // check if the player has 3 fishes, then he/she wins and show the winner message and stop the game
         }
-        // Play background music
         private void LoopMusic()
         {
             string musicFilePath = Application.StartupPath + "\\BGMusic.wav";
             SoundPlayer BGMusic = new SoundPlayer(musicFilePath);
             BGMusic.PlayLooping();
         }
-        protected void FillFoodOnPlate()
-        {
-            FillFishesInthePlate = new Timer();
-            FillFishesInthePlate.Interval = generateRandomNumber(); // generate a random number from 2 to 3 seconds
-            FillFishesInthePlate.Tick += DisplayFishesOrBone; // event handler
-            FillFishesInthePlate.Start();// start the timer
-        }
-        protected void DisappearFoodOnPlate()
-        {
-            NoFishesInthePlate = new Timer();
-            NoFishesInthePlate.Interval = generateRandomNumber();
-            NoFishesInthePlate.Tick += Disappear;
-            NoFishesInthePlate.Start();
-        }
 
-        // check if the player has 3 fishes, then he/she wins and show the winner message and stop the game
-
-
-        // Event handler when pressing the Q key (First Player)
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Q)
             {
-                // Timer event handler - make the panel invisible when the timer ticks
-                FirstHandPanel.Visible = false;
-                FirstLongHand.Visible = true;
 
-                ScoreControl(ref Player1_score, Player1Score);
+                Cat1_top_left.SetVisibleShortHand(false);
+                Cat1_top_left.setVisiblLongHand(true);
+
+                player1.ScoreControl(food);
+                player1.CheckPlayerScore();
 
                 panelTimer.Start();
                 return true;
@@ -86,11 +58,11 @@ namespace CATchingFish
 
             if (keyData == Keys.E)
             {
-                // Timer event handler - make the panel invisible when the timer ticks
-                SecondHand.Visible = false;
-                SecondLongHand.Visible = true;
+                Cat2_top_right.SetVisibleShortHand(false);
+                Cat2_top_right.setVisiblLongHand(true);
 
-                ScoreControl(ref Player2_score, Player2Score);
+                player2.ScoreControl(food);
+                player2.CheckPlayerScore();
 
                 panelTimer.Start();
                 return true;
@@ -98,11 +70,12 @@ namespace CATchingFish
 
             if (keyData == Keys.Z)
             {
-                // Timer event handler - make the panel invisible when the timer ticks
-                ThirdHand.Visible = false;
-                ThirdLongHand.Visible = true;
+                Cat3_bottom_left.SetVisibleShortHand(false);
+                Cat3_bottom_left.setVisiblLongHand(true);
 
-                ScoreControl(ref Player3_score, Player3Score);
+                player3.ScoreControl(food);
+                player3.CheckPlayerScore();
+
 
                 panelTimer.Start();
                 return true;
@@ -110,12 +83,10 @@ namespace CATchingFish
 
             if (keyData == Keys.C)
             {
-                // Timer event handler - make the panel invisible when the timer ticks
-                FourthHand.Visible = false;
-                FourthLongHand.Visible = true;
-
-                ScoreControl(ref Player4_score, Player4Score);
-
+                Cat4_bottom_right.SetVisibleShortHand(false);
+                Cat4_bottom_right.setVisiblLongHand(true);
+                player4.ScoreControl(food);
+                player4.CheckPlayerScore();
                 panelTimer.Start();
                 return true;
             }
@@ -124,7 +95,6 @@ namespace CATchingFish
             {
                 DialogResult result;
                 result = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
                 if (result == DialogResult.Yes)
                 {
                     Close();
@@ -139,128 +109,15 @@ namespace CATchingFish
         // Timer event handler
         private void PanelTimer_Tick(object sender, EventArgs e)
         {
-
             panelTimer.Stop(); // Stop the timer
-            HandControl(FirstHandPanel, FirstLongHand);
-            HandControl(SecondHand, SecondLongHand);
-            HandControl(ThirdHand, ThirdLongHand);
-            HandControl(FourthHand, FourthLongHand);
-        }
-
-        protected void ScoreControl(ref int PlayerGOTFish, Button ScoreBoard)
-        {
-            // Check FillFishesInThePlate timer is running or DisappearFoodOnPlate timer is running
-            // If FillFishesInThePlate timer is running, then score++
-            // If DisappearFoodOnPlate timer is running, then score--
-            if (!FillFishesInthePlate.Enabled && Fishes.Visible)
-            {
-                // Score++
-                PlayerGOTFish++;
-                ScoreBoard.Text = PlayerGOTFish.ToString();
-
-                // Start the timer to fill the plate with fishes again
-                FillFishesInthePlate.Start();
-                Fishes.Visible = false;
-            }
-            else if (!FillFishesInthePlate.Enabled && !Fishes.Visible)
-            {
-                // Score--
-                PlayerGOTFish--;
-                if (PlayerGOTFish < 0) ScoreBoard.Text = "-" + (Math.Abs(PlayerGOTFish).ToString());
-                else ScoreBoard.Text = PlayerGOTFish.ToString();
-                FillFishesInthePlate.Start();
-                Bone.Visible = false;
-            }
-            else
-            {
-                // Do nothing
-            }
-            if (PlayerGOTFish == 3)
-            {
-                // Stop the game
-                FillFishesInthePlate.Stop();
-                NoFishesInthePlate.Stop();
-                panelTimer.Stop();
-
-                // Show the winner message
-                if (ScoreBoard == Player1Score)
-                {
-                    MessageBox.Show("Player 1 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (ScoreBoard == Player2Score)
-                {
-                    MessageBox.Show("Player 2 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (ScoreBoard == Player3Score)
-                {
-                    MessageBox.Show("Player 3 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (ScoreBoard == Player4Score)
-                {
-                    MessageBox.Show("Player 4 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    // Do nothing
-                }
-                Close();
-            }
-            else
-            {
-                // Do nothing
-            }
-
-        }
-        protected void HandControl(Panel Short_Hand, Panel Long_Hand)
-        {
-            Short_Hand.Visible = true;
-            Long_Hand.Visible = false;
-
+            Cat1_top_left.HandControl(Cat1_top_left.GetShort_Hand(), Cat1_top_left.GetLong_Hand());
+            Cat2_top_right.HandControl(Cat2_top_right.GetShort_Hand(), Cat2_top_right.GetLong_Hand());
+            Cat3_bottom_left.HandControl(Cat3_bottom_left.GetShort_Hand(), Cat3_bottom_left.GetLong_Hand());
+            Cat4_bottom_right.HandControl(Cat4_bottom_right.GetShort_Hand(), Cat4_bottom_right.GetLong_Hand());
         }
 
 
-        private void DisplayFishesOrBone(object sender, EventArgs e)
-        {
-            object Food = generateRandomFishesOrBone();
-            if (Food == Fishes)
-            {
-                // set fishes in the front of the plate
-                Bone.Visible = false;
-                Fishes.Visible = true;
-                Fishes.BringToFront();
-            }
-            else
-            {
-                Fishes.Visible = false;
-                Bone.Visible = true;
-                Bone.BringToFront();
-            }
-            FillFishesInthePlate.Stop();
-            NoFishesInthePlate.Start();
-        }
 
-        public void Disappear(object sender, EventArgs e)
-        {
-            Bone.Visible = false;
-            Fishes.Visible = false;
-            NoFishesInthePlate.Stop();
-            FillFishesInthePlate.Start();
-        }
-
-        private int generateRandomNumber()
-        {
-            Random rnd = new Random();
-            int num = rnd.Next(2000, 3500);
-            return num;
-        }
-
-        private object generateRandomFishesOrBone()
-        {
-            Random rnd = new Random();
-            object[] Food = { Fishes, Bone };
-            int num = rnd.Next(Food.Length);
-            return Food[num];
-        }
 
     }
 }
