@@ -1,6 +1,6 @@
 ﻿namespace CATchingFish
 {
-    partial class PLAYWITHTEAM
+    public partial class PLAYWITHTEAM : PLAYWITHFRIENDS
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PLAYWITHTEAM";
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.ClientSize = new System.Drawing.Size(800, 450);
+            //this.Text = "PLAYWITHTEAM";
+            
+
+            //override player2's button color
+
+            this.Player2Score.ForeColor = System.Drawing.Color.Red;
+            this.Player3Score.ForeColor = System.Drawing.Color.Blue;
         }
 
         #endregion

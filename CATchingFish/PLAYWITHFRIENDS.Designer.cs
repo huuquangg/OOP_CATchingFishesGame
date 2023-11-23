@@ -2,7 +2,7 @@
 
 namespace CATchingFish
 {
-    partial class PLAYWITHFRIENDS
+    public partial class PLAYWITHFRIENDS
     {
         /// <summary>
         /// Required designer variable.
@@ -341,9 +341,9 @@ namespace CATchingFish
         private System.Windows.Forms.Panel Fishes;
         
         private System.Windows.Forms.Button Player1Score;
-        private System.Windows.Forms.Button Player2Score;
+        public System.Windows.Forms.Button Player2Score;
+        public System.Windows.Forms.Button Player3Score;
         private System.Windows.Forms.Button Player4Score;
-        private System.Windows.Forms.Button Player3Score;
     }
 }
 

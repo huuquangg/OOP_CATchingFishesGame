@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace CATchingFish
 {
-    public partial class PLAYWITHTEAM : Form
+    public partial class PLAYWITHTEAM : PLAYWITHFRIENDS
     {
         public PLAYWITHTEAM()
         {
             InitializeComponent();
+
+            // override the Title name
+            this.Text = "PLAYWITHTEAM";
+
+            // override player2's button color
+            
         }
     }
 }
