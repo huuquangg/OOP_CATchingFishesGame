@@ -175,6 +175,40 @@ namespace CATchingFish
             {
                 // Do nothing
             }
+            if (PlayerGOTFish == 3)
+            {
+                // Stop the game
+                FillFishesInthePlate.Stop();
+                NoFishesInthePlate.Stop();
+                panelTimer.Stop();
+
+                // Show the winner message
+                if (ScoreBoard == Player1Score)
+                {
+                    MessageBox.Show("Player 1 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (ScoreBoard == Player2Score)
+                {
+                    MessageBox.Show("Player 2 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (ScoreBoard == Player3Score)
+                {
+                    MessageBox.Show("Player 3 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (ScoreBoard == Player4Score)
+                {
+                    MessageBox.Show("Player 4 wins!", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Do nothing
+                }
+                Close();
+            }
+            else
+            {
+                // Do nothing
+            }
 
         }
         protected void HandControl(Panel Short_Hand, Panel Long_Hand)
